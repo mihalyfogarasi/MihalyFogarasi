@@ -1,0 +1,66 @@
+#Házi Feladat
+#2.	hozz létre egy „krumpli” nevű objektumot, amiben a Pí szám szerepeljen
+
+krumpli <- pi
+
+#3.	Írd ki „krumpli” értékét
+
+krumpli
+
+#4.	Legyen egy „b” objektum, amiben 342*”krumpli” értéke legyen
+
+b <- 342*krumpli
+b
+
+#5.	legyen egy „sorozat” változó, amiben 44-től 60-ig legyenek számok, egyesével növekvő módon
+
+sorozat <- 44:60
+sorozat
+
+#6.	Hozz létre egy logikai változót, amiben ugyanannyi elem van mint a sorozatban, de azt mondja meg melyik páros (Ott TRUE), ahol páratlan ott FALSE érték legyen.
+
+v <- sorozat %% 2 == 0
+v
+
+#7.	Add össze b-t a sorozattal: mit kapsz?
+
+print (b + sorozat)
+
+#8.	Hozz létre egy faktort, amiben „Gizi”, „Béla” és „Jenő” szerepeljen! (FAKTOR-t)
+
+nevek <- c("Gizi", "Bela", "Jeno")
+nevek
+factor_nevek <- factor(nevek)
+factor_nevek
+View(factor_nevek)
+
+#9.	Hozz létre egy faktort, amiben „Gizi”, „Béla” és „Jenő”, de úgy hogy 3-as értéke legyen „Bélá”nak!
+
+factor_nevek <- factor(factor_nevek, levels (factor_nevek) [3:1])
+factor_nevek
+as.numeric(factor_nevek)
+
+#10.	Hozz létre egy sorozatot, amiben 10-től 100-ig csak a páros számok vannak
+
+seq(10,100,by=2)
+
+#11.	Hozz létre egy „M” mátrixot, ami 12*5 cellát tartalmaz, és a benne szereplő értékek a cella sorszámának -1-szerese legyen (byrow=FALSE) 
+
+M <- matrix(1:60*-1 , 12, 5, byrow=FALSE)
+M
+
+#12.	Hozz létre egy 3*4*2*5-ös tömböt, amelyben mindig az utolsó 2 dimenzió szorzata legyen a  cellaérték
+
+
+
+#13.	olvasd be az ESS7.sav fájlt egy data.frame-be
+
+setwd("C:/Users/fogarasi/Desktop/programozás/HF")
+Dataset <-  read.spss("ESS7.sav", 
+                       rownames=FALSE, 
+                       stringsAsFactors=TRUE, 
+                      tolower=FALSE, 
+                       to.data.frame = TRUE)
+View(Dataset)
+
+
